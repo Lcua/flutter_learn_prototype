@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learn_flutter_app/util/question_brain.dart';
 import 'package:learn_flutter_app/util/question.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:audioplayers/audio_cache.dart';
 
 QuestionBrain questionBrain = QuestionBrain();
 
@@ -19,6 +20,7 @@ class _QuizScreenState extends State<QuizScreen> {
     String correctAnswer = questionBrain.getQuestionRightAnswer();
 
     if (userPickedAnswer == correctAnswer) {
+      playSound('sound1.wav');
       scoreKeeper++;
     } else {
       scoreKeeper--;
@@ -26,6 +28,11 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() {
       questionBrain.nextQuestion();
     });
+  }
+
+  void playSound(String soundFile) {
+    final player = AudioCache();
+    player.play(soundFile);
   }
 
   @override
@@ -41,7 +48,7 @@ class _QuizScreenState extends State<QuizScreen> {
             padding: EdgeInsets.all(15.0),
             child: Center(
               child: Text(
-                'Score: ${scoreKeeper}',
+                'Score: $scoreKeeper',
                 style: TextStyle(color: Colors.blueGrey, fontSize: 20.0),
               ),
             ),

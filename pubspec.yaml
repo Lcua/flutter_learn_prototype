@@ -12,6 +12,7 @@ dependencies:
 
   cupertino_icons: ^0.1.2
   rflutter_alert: ^1.0.3
+  audioplayers: ^0.10.0
 
 dev_dependencies:
   flutter_test:
@@ -22,3 +23,4 @@ flutter:
 
   assets:
   - images/
+  - audio/
