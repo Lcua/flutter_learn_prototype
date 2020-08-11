@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
             TextField(
               style: TextStyle(color: Colors.black),
               onChanged: (value) {
-                //TO-DO: Do something with the user input.
+                //TODO: Do something with the user input.
               },
               decoration: InputDecoration(
                 fillColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
             TextField(
               style: TextStyle(color: Colors.black),
               onChanged: (value) {
-                //Do something with the user input.
+                //TODO: Do something with the user input.
               },
               decoration: InputDecoration(
                 fillColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -93,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    //TO-DO: Implement login functionality.
+                    //TODO: Implement login functionality.
                   },
                   minWidth: 200.0,
                   height: 42.0,

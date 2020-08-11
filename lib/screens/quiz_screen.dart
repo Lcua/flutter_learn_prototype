@@ -22,9 +22,7 @@ class _QuizScreenState extends State<QuizScreen> {
     if (userPickedAnswer == correctAnswer) {
       playSound('sound1.wav');
       scoreKeeper++;
-    } else {
-      scoreKeeper--;
-    }
+    } else {}
     setState(() {
       questionBrain.nextQuestion();
     });
@@ -87,19 +85,6 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
               onPressed: () {
                 checkAnswer(questionBrain.getQuestionAnswer1());
-
-                /*if (questionBrain.isFinished()) {
-                  Alert(
-                          context: context,
-                          title: "RFLUTTER",
-                          desc: "Flutter is awesome.")
-                      .show();
-                  scoreKeeper = [];
-                } else {}*/
-
-                /*scoreKeeper.add(
-                    Icon(Icons.check, color: Colors.green),
-                  );*/
               },
             ),
           ),
@@ -120,17 +105,6 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
               onPressed: () {
                 checkAnswer(questionBrain.getQuestionAnswer2());
-                /*if (questionBrain.isFinished()) {
-                  Alert(
-                          context: context,
-                          title: "RFLUTTER",
-                          desc: "Flutter is awesome.")
-                      .show();
-                } else {}*/
-
-                /*scoreKeeper.add(
-                    Icon(Icons.close, color: Colors.red),
-                  );*/
               },
             ),
           ),
@@ -152,19 +126,6 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
               onPressed: () {
                 checkAnswer(questionBrain.getQuestionAnswer3());
-
-                /*if (questionBrain.isFinished()) {
-                  Alert(
-                          context: context,
-                          title: "RFLUTTER",
-                          desc: "Flutter is awesome.")
-                      .show();
-                  scoreKeeper = [];
-                } else {}*/
-
-                /*scoreKeeper.add(
-                    Icon(Icons.check, color: Colors.green),
-                  );*/
               },
             ),
           ),
@@ -185,17 +146,6 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
               onPressed: () {
                 checkAnswer(questionBrain.getQuestionAnswer4());
-                /*if (questionBrain.isFinished()) {
-                  Alert(
-                          context: context,
-                          title: "RFLUTTER",
-                          desc: "Flutter is awesome.")
-                      .show();
-                } else {}*/
-
-                /*scoreKeeper.add(
-                    Icon(Icons.close, color: Colors.red),
-                  );*/
               },
             ),
           ),

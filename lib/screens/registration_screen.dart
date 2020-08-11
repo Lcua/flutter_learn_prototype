@@ -27,7 +27,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             TextField(
               onChanged: (value) {
-                //Do something with the user input.
+                //TODO: Do something with the user input.
               },
               decoration: InputDecoration(
                 fillColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -56,7 +56,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             TextField(
               onChanged: (value) {
-                //Do something with the user input.
+                //TODO: Do something with the user input.
               },
               decoration: InputDecoration(
                 fillColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -85,7 +85,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             TextField(
               onChanged: (value) {
-                //Do something with the user input.
+                //TODO: Do something with the user input.
               },
               decoration: InputDecoration(
                 fillColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -120,7 +120,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    //Implement registration functionality.
+                    //TODO: Implement registration functionality.
                   },
                   minWidth: 200.0,
                   height: 42.0,

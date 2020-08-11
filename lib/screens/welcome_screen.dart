@@ -4,6 +4,9 @@ import 'registration_screen.dart';
 import 'quiz_screen.dart';
 import 'menu_screen.dart';
 
+//This should only have a logo, the sign in and sign up buttons
+//currently used as a simple hub for the screens
+
 class WelcomeScreen extends StatefulWidget {
   static String id = 'welcome_screen';
 
