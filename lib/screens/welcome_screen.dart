@@ -3,6 +3,8 @@ import 'login_screen.dart';
 import 'registration_screen.dart';
 import 'quiz_screen.dart';
 import 'menu_screen.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:learn_flutter_app/components/rounded_button.dart';
 
 //This should only have a logo, the sign in and sign up buttons
 //currently used as a simple hub for the screens
@@ -27,9 +29,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Text(
-                  'Learn Flutter App',
-                  style: TextStyle(
+                TypewriterAnimatedTextKit(
+                  text: ['Learn Flutter App'],
+                  textStyle: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
                     color: Colors.white,
@@ -40,78 +42,26 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             SizedBox(
               height: 48.0,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                elevation: 5.0,
-                color: Color.fromRGBO(255, 56, 90, 1.0),
-                borderRadius: BorderRadius.circular(30.0),
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, LoginScreen.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Log In',
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Color.fromRGBO(255, 56, 90, 1.0),
-                borderRadius: BorderRadius.circular(30.0),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, RegistrationScreen.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Register',
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Color.fromRGBO(255, 56, 90, 1.0),
-                borderRadius: BorderRadius.circular(30.0),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, MenuScreen.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Menu',
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Color.fromRGBO(255, 56, 90, 1.0),
-                borderRadius: BorderRadius.circular(30.0),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, QuizScreen.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Quiz',
-                  ),
-                ),
-              ),
-            ),
+            RoundedButton(
+                title: 'Log in',
+                onPressed: () {
+                  Navigator.pushNamed(context, LoginScreen.id);
+                }),
+            RoundedButton(
+                title: 'Register',
+                onPressed: () {
+                  Navigator.pushNamed(context, RegistrationScreen.id);
+                }),
+            RoundedButton(
+                title: 'Menu',
+                onPressed: () {
+                  Navigator.pushNamed(context, MenuScreen.id);
+                }),
+            RoundedButton(
+                title: 'Quiz',
+                onPressed: () {
+                  Navigator.pushNamed(context, QuizScreen.id);
+                }),
           ],
         ),
       ),
